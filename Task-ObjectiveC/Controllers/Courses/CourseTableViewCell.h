@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface CourseTableViewCell : UITableViewCell
 
-@end
+@property (weak, nonatomic) IBOutlet UIImageView *courseImage;
+@property (weak, nonatomic) IBOutlet UILabel *courseName;
+@property (weak, nonatomic) IBOutlet UIButton *openPDF;
+@property (weak, nonatomic) IBOutlet UITextView *courseDescription;
 
-NS_ASSUME_NONNULL_END
+@end

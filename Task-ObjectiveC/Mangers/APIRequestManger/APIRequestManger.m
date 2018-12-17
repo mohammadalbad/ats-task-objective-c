@@ -24,10 +24,8 @@
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html",@"text/plain", nil];
 
     [manager GET:_url parameters:nil progress: nil success:^(NSURLSessionTask *task, id responseObject) {
-        NSLog (@"response:%@", responseObject);
         _Block (YES, 200, responseObject);
     } failure:^(NSURLSessionTask *operation, NSError *error) {
-        NSLog(@"error:%@",error);
         _Block (NO, 400, error);
     }];
     

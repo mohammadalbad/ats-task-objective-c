@@ -133,10 +133,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="courseDescription" destination="N88-L0-3TX" id="f51-W2-uqC"/>
-                                            <outlet property="courseImage" destination="rst-ES-b28" id="Zu4-dA-O1O"/>
-                                            <outlet property="courseName" destination="NMm-rx-qFa" id="5Yb-6U-SZ0"/>
-                                            <outlet property="courseOpenPDF" destination="Gn8-wp-UJP" id="foJ-ve-lUE"/>
+                                            <outlet property="courseDescription" destination="N88-L0-3TX" id="Ndm-ez-K8W"/>
+                                            <outlet property="courseImage" destination="rst-ES-b28" id="mzI-8S-6qb"/>
+                                            <outlet property="courseName" destination="NMm-rx-qFa" id="LC5-lO-bq7"/>
+                                            <outlet property="openPDF" destination="Gn8-wp-UJP" id="lJa-QH-dIh"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -151,6 +151,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="N64-o8-cKN"/>
                     </view>
+                    <connections>
+                        <outlet property="_coursesTable" destination="cWi-Xg-4cR" id="Tk8-P9-QEL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lSO-2l-wXl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
