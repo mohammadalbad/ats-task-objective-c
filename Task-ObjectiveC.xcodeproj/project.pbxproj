@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7B6691F021C7F77E003F8743 /* APIRequestManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6691EF21C7F77E003F8743 /* APIRequestManger.m */; };
 		7B6691F621C859A7003F8743 /* CoursesResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6691F521C859A7003F8743 /* CoursesResponseModel.m */; };
+		7B6691F921C8641E003F8743 /* PDFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6691F821C8641E003F8743 /* PDFViewController.m */; };
 		7B9352C921C6EB78006789C6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9352C821C6EB78006789C6 /* AppDelegate.m */; };
 		7B9352CC21C6EB78006789C6 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9352CB21C6EB78006789C6 /* LoginViewController.m */; };
 		7B9352CF21C6EB78006789C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B9352CD21C6EB78006789C6 /* Main.storyboard */; };
@@ -30,6 +31,8 @@
 		7B6691EF21C7F77E003F8743 /* APIRequestManger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIRequestManger.m; sourceTree = "<group>"; };
 		7B6691F321C85828003F8743 /* CoursesResponseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoursesResponseModel.h; sourceTree = "<group>"; };
 		7B6691F521C859A7003F8743 /* CoursesResponseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoursesResponseModel.m; sourceTree = "<group>"; };
+		7B6691F721C8641E003F8743 /* PDFViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFViewController.h; sourceTree = "<group>"; };
+		7B6691F821C8641E003F8743 /* PDFViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDFViewController.m; sourceTree = "<group>"; };
 		7B9352C421C6EB78006789C6 /* Task-ObjectiveC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Task-ObjectiveC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B9352C721C6EB78006789C6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7B9352C821C6EB78006789C6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -80,6 +83,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		7B6691FA21C86425003F8743 /* View PDF */ = {
+			isa = PBXGroup;
+			children = (
+				7B6691F721C8641E003F8743 /* PDFViewController.h */,
+				7B6691F821C8641E003F8743 /* PDFViewController.m */,
+			);
+			path = "View PDF";
+			sourceTree = "<group>";
+		};
 		7B9352BB21C6EB78006789C6 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +139,7 @@
 			children = (
 				7B9352E221C6F1AB006789C6 /* Login */,
 				7B9352E621C6F1C5006789C6 /* Courses */,
+				7B6691FA21C86425003F8743 /* View PDF */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -327,6 +340,7 @@
 				7B9352CC21C6EB78006789C6 /* LoginViewController.m in Sources */,
 				7B6691F021C7F77E003F8743 /* APIRequestManger.m in Sources */,
 				7B9352E521C6F1BD006789C6 /* CoursesViewController.m in Sources */,
+				7B6691F921C8641E003F8743 /* PDFViewController.m in Sources */,
 				7BB79CC021C77F760014B999 /* ProgressIndicatorManger.m in Sources */,
 				7B6691F621C859A7003F8743 /* CoursesResponseModel.m in Sources */,
 				7B9352D721C6EB79006789C6 /* main.m in Sources */,

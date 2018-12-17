@@ -13,6 +13,7 @@
 #import "CoursesResponseModel.h"
 #import "CourseTableViewCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "PDFViewController.h"
 
 static NSString *cellIdentifier = @"SB_CourseTableViewCell";
 
@@ -20,20 +21,22 @@ static NSString *cellIdentifier = @"SB_CourseTableViewCell";
 
 @end
 
+
 @implementation CoursesViewController
+
+@synthesize coursesArray, _coursesTable;
 
 - (void)viewWillAppear:(BOOL)animated{
     [self.navigationController setNavigationBarHidden:true animated:true];
-    
-    _coursesArray = [[NSMutableArray alloc] init];
-
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    __coursesTable.delegate = self;
-    __coursesTable.dataSource = self;
+    coursesArray = [[NSMutableArray alloc] init];
+
+    _coursesTable.delegate = self;
+    _coursesTable.dataSource = self;
     
     [self CoursesRequest];
     
@@ -47,26 +50,48 @@ static NSString *cellIdentifier = @"SB_CourseTableViewCell";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [_coursesArray count];
+    return [coursesArray count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    CoursesResponseModel *obj = [_coursesArray objectAtIndex:indexPath.row];
     
-    CourseTableViewCell *cell = [__coursesTable dequeueReusableCellWithIdentifier:cellIdentifier];
-
     
-    cell.courseName.text = obj.CouseName;
-    cell.courseDescription.text = obj.CouseDesc;
+    CourseTableViewCell *cell = [_coursesTable dequeueReusableCellWithIdentifier:cellIdentifier];
+    if(cell == nil) {
+        cell = [[CourseTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    }
     
-    [cell.courseImage sd_setImageWithURL:[NSURL URLWithString:obj.CouseImage] placeholderImage: nil];
+    if([coursesArray count] != 0) {
+        
+        CoursesResponseModel *obj = [coursesArray objectAtIndex:indexPath.row];
+        
+        cell.courseName.text = obj.CouseName;
+        cell.courseDescription.text = obj.CouseDesc;
+        [cell.courseImage sd_setImageWithURL:[NSURL URLWithString:obj.CouseImage] placeholderImage: nil];
+        
+        cell.openPDF.tag = indexPath.row;
+        [cell.openPDF addTarget:self action:@selector(OpenPDF:) forControlEvents:UIControlEventTouchUpInside];
+        
+    }
     
     return cell;
 }
 
+- (void)OpenPDF:(UIButton *)sender {
+    
+    NSLog(@"%li", sender.tag);
+    
+    CoursesResponseModel *obj = [coursesArray objectAtIndex:sender.tag];
+    
+    UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    PDFViewController *pdfViewController = [storyboard instantiateViewControllerWithIdentifier:@"SB_PDFViewController"];
+    pdfViewController._url = obj.pdfURL;
+    [self.navigationController pushViewController:pdfViewController animated:YES];
+    
+}
 
 - (void)CoursesRequest
 {
@@ -102,14 +127,14 @@ static NSString *cellIdentifier = @"SB_CourseTableViewCell";
                     obj.CouseDesc = CouseDesc;
                     obj.CouseImage = CouseImage;
                     obj.pdfURL = pdfURL;
-
-                    [self->_coursesArray addObject:obj];
+                    
+                    [self->coursesArray addObject:obj];
                     
                 }
                 
-                self->__coursesTable.reloadData;
-
-               
+                self->_coursesTable.reloadData;
+                
+                
             }
             
         }
