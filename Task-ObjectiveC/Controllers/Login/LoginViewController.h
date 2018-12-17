@@ -17,5 +17,7 @@
 
 - (void)LoginRequest:(NSString *)userNameValue withPassword: (NSString *)passwordValue;
 
+- (void)OpenUserCourses:(BOOL)animated;
+
 @end
 

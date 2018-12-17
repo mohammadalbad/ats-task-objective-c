@@ -10,6 +10,7 @@
 #import "APIRequestManger.h"
 #import "UtilityAPIHost.h"
 #import "ProgressIndicatorManger.h"
+#import "CoursesViewController.h"
 
 @interface LoginViewController()
 
@@ -19,14 +20,20 @@
 
 @synthesize userName, password;
 
-
 - (void)viewWillAppear:(BOOL)animated{
     [self.navigationController setNavigationBarHidden:true animated:true];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    id user = [defaults valueForKey:@"user"];
+    
+    if ([user length] != 0) {
+        [self OpenUserCourses:NO];
+    }
+    
 }
 
 - (IBAction)Login:(id)sender {
@@ -55,28 +62,38 @@
     NSString *_URL = [NSString stringWithFormat:@"%@%@%@%@%@%@", HOST, LOGIN, @"?username=", userNameValue, @"&password=", passwordValue];
     
     [APIRequestManger APIRequest:_URL withBlock:^(BOOL isSuccess, NSInteger statusCode, id response) {
-       
+        
         [ProgressIndicatorManger hideProgressHUD];
-
+        
         if (isSuccess) {
             
             NSError *error;
             NSMutableArray *json = [NSJSONSerialization JSONObjectWithData:response options:kNilOptions error:&error];
-
+            
             if ([json count] != 0) {
                 
-                NSString *ID = json[0][@"ID"];
-                NSString *FullName = json[0][@"FullName"];
-                NSString *Password = json[0][@"Password"];
-                NSString *UserName = json[0][@"UserName"];
+                // MARK: if you want to use the data we can by doing this :
+                // NSString *FullName = json[0][@"FullName"];
+                
+                NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+                [defaults setValue:response forKeyPath:@"user"];
+                [defaults synchronize];
+                
+                [self OpenUserCourses:YES];
                 
             }
             
         }
     }];
     
-    
-    
 }
+
+- (void)OpenUserCourses:(BOOL)animated
+{
+    UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    CoursesViewController *coursesViewController = [storyboard instantiateViewControllerWithIdentifier:@"SB_CoursesViewController"];
+    [self.navigationController pushViewController:coursesViewController animated:animated];
+}
+
 
 @end
