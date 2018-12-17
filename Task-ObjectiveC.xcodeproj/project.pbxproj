@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B6691F021C7F77E003F8743 /* APIRequestManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6691EF21C7F77E003F8743 /* APIRequestManger.m */; };
 		7B9352C921C6EB78006789C6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9352C821C6EB78006789C6 /* AppDelegate.m */; };
 		7B9352CC21C6EB78006789C6 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9352CB21C6EB78006789C6 /* LoginViewController.m */; };
 		7B9352CF21C6EB78006789C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B9352CD21C6EB78006789C6 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 		7B9352E121C6ECF2006789C6 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 7B9352E021C6ECF2006789C6 /* Podfile */; };
 		7B9352E521C6F1BD006789C6 /* CoursesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9352E421C6F1BC006789C6 /* CoursesViewController.m */; };
 		7B9352E921C6F23A006789C6 /* CourseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9352E821C6F23A006789C6 /* CourseTableViewCell.m */; };
+		7BB79CC021C77F760014B999 /* ProgressIndicatorManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB79CBF21C77F760014B999 /* ProgressIndicatorManger.m */; };
 		7E59DEBE0AB638EEA5B960BD /* Pods_Task_ObjectiveC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B264D0BE45E22D631BAE641 /* Pods_Task_ObjectiveC.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +25,8 @@
 		121F5F0FA5FD60D2E86B2BCE /* Pods-Task-ObjectiveC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Task-ObjectiveC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Task-ObjectiveC/Pods-Task-ObjectiveC.debug.xcconfig"; sourceTree = "<group>"; };
 		18C6C523EC9AD7DBA9BB2198 /* Pods-Task-ObjectiveC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Task-ObjectiveC.release.xcconfig"; path = "Pods/Target Support Files/Pods-Task-ObjectiveC/Pods-Task-ObjectiveC.release.xcconfig"; sourceTree = "<group>"; };
 		3B264D0BE45E22D631BAE641 /* Pods_Task_ObjectiveC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Task_ObjectiveC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B6691ED21C7F74C003F8743 /* APIRequestManger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIRequestManger.h; sourceTree = "<group>"; };
+		7B6691EF21C7F77E003F8743 /* APIRequestManger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIRequestManger.m; sourceTree = "<group>"; };
 		7B9352C421C6EB78006789C6 /* Task-ObjectiveC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Task-ObjectiveC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B9352C721C6EB78006789C6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7B9352C821C6EB78006789C6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -33,11 +37,14 @@
 		7B9352D321C6EB79006789C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B9352D521C6EB79006789C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B9352D621C6EB79006789C6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		7B9352E021C6ECF2006789C6 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		7B9352E021C6ECF2006789C6 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		7B9352E321C6F1BC006789C6 /* CoursesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoursesViewController.h; sourceTree = "<group>"; };
 		7B9352E421C6F1BC006789C6 /* CoursesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoursesViewController.m; sourceTree = "<group>"; };
 		7B9352E721C6F23A006789C6 /* CourseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CourseTableViewCell.h; sourceTree = "<group>"; };
 		7B9352E821C6F23A006789C6 /* CourseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CourseTableViewCell.m; sourceTree = "<group>"; };
+		7BB79CBE21C77F530014B999 /* ProgressIndicatorManger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProgressIndicatorManger.h; sourceTree = "<group>"; };
+		7BB79CBF21C77F760014B999 /* ProgressIndicatorManger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProgressIndicatorManger.m; sourceTree = "<group>"; };
+		7BB79CC421C78E410014B999 /* UtilityAPIHost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UtilityAPIHost.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +59,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B6691EE21C7F764003F8743 /* APIRequestManger */ = {
+			isa = PBXGroup;
+			children = (
+				7B6691ED21C7F74C003F8743 /* APIRequestManger.h */,
+				7B6691EF21C7F77E003F8743 /* APIRequestManger.m */,
+			);
+			path = APIRequestManger;
+			sourceTree = "<group>";
+		};
 		7B9352BB21C6EB78006789C6 = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +90,8 @@
 		7B9352C621C6EB78006789C6 /* Task-ObjectiveC */ = {
 			isa = PBXGroup;
 			children = (
+				7BB79CC321C77F910014B999 /* Utilites */,
+				7BB79CC221C77F860014B999 /* Mangers */,
 				7B9352DD21C6EBC3006789C6 /* Delegates */,
 				7B9352DE21C6EBCA006789C6 /* Controllers */,
 				7B9352DF21C6EC0C006789C6 /* Resources */,
@@ -129,6 +147,32 @@
 				7B9352E821C6F23A006789C6 /* CourseTableViewCell.m */,
 			);
 			path = Courses;
+			sourceTree = "<group>";
+		};
+		7BB79CC121C77F7D0014B999 /* ProgressIndicatorManger */ = {
+			isa = PBXGroup;
+			children = (
+				7BB79CBE21C77F530014B999 /* ProgressIndicatorManger.h */,
+				7BB79CBF21C77F760014B999 /* ProgressIndicatorManger.m */,
+			);
+			path = ProgressIndicatorManger;
+			sourceTree = "<group>";
+		};
+		7BB79CC221C77F860014B999 /* Mangers */ = {
+			isa = PBXGroup;
+			children = (
+				7BB79CC121C77F7D0014B999 /* ProgressIndicatorManger */,
+				7B6691EE21C7F764003F8743 /* APIRequestManger */,
+			);
+			path = Mangers;
+			sourceTree = "<group>";
+		};
+		7BB79CC321C77F910014B999 /* Utilites */ = {
+			isa = PBXGroup;
+			children = (
+				7BB79CC421C78E410014B999 /* UtilityAPIHost.h */,
+			);
+			path = Utilites;
 			sourceTree = "<group>";
 		};
 		E40B586533E48ACDC7839BF6 /* Pods */ = {
@@ -228,7 +272,6 @@
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -236,7 +279,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -270,7 +312,9 @@
 			files = (
 				7B9352E921C6F23A006789C6 /* CourseTableViewCell.m in Sources */,
 				7B9352CC21C6EB78006789C6 /* LoginViewController.m in Sources */,
+				7B6691F021C7F77E003F8743 /* APIRequestManger.m in Sources */,
 				7B9352E521C6F1BD006789C6 /* CoursesViewController.m in Sources */,
+				7BB79CC021C77F760014B999 /* ProgressIndicatorManger.m in Sources */,
 				7B9352D721C6EB79006789C6 /* main.m in Sources */,
 				7B9352C921C6EB78006789C6 /* AppDelegate.m in Sources */,
 			);
@@ -417,6 +461,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "$(SRCROOT)/Task-ObjectiveC/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -434,6 +479,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "$(SRCROOT)/Task-ObjectiveC/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -15,7 +15,7 @@
 @implementation CoursesViewController
 
 - (void)viewWillAppear:(BOOL)animated{
-    [self.navigationController setNavigationBarHidden:true animated:true]
+    [self.navigationController setNavigationBarHidden:true animated:true];
 }
 
 - (void)viewDidLoad {
