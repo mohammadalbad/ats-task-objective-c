@@ -57,6 +57,9 @@
 - (void)LoginRequest:(NSString *)userNameValue withPassword:(NSString *)passwordValue
 {
     
+    [userName resignFirstResponder];
+    [password resignFirstResponder];
+
     [ProgressIndicatorManger showProgressHUD];
     
     NSString *_URL = [NSString stringWithFormat:@"%@%@%@%@%@%@", HOST, LOGIN, @"?username=", userNameValue, @"&password=", passwordValue];
@@ -81,6 +84,8 @@
                 
                 [self OpenUserCourses:YES];
                 
+            } else {
+                [self OpenAlert];
             }
             
         }
@@ -93,6 +98,15 @@
     UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     CoursesViewController *coursesViewController = [storyboard instantiateViewControllerWithIdentifier:@"SB_CoursesViewController"];
     [self.navigationController pushViewController:coursesViewController animated:animated];
+}
+
+
+- (void)OpenAlert
+{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"" message:@"Incorrect UserName or Password!" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){}];
+    [alert addAction:defaultAction];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 

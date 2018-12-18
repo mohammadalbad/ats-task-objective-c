@@ -19,5 +19,7 @@
 
 - (void)OpenUserCourses:(BOOL)animated;
 
+- (void)OpenAlert;
+
 @end
 
